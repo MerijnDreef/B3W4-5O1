@@ -1,8 +1,18 @@
 <?php
-$conn = new PDO('mysql:host=localhost;dbname=login-test', $user, $pass);
-$statement = $conn->prepare('SELECT * FROM users WHERE username = :username AND password = :password');
-$statement->execute([':username' => $_POST['userName'], ':password' => $userpass]);
-$result = $statement->fetchAll();
+$dbservername = "localhost";
+$username = 'SilverHawk'; 
+$password = '2lhTgGvMS4YKS3t2H7MV';
+$dbname = "characters";
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=characters", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connected successfully";
+    }
+catch(PDOException $e)
+    {
+    echo "Connection failed: " . $e->getMessage();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +22,9 @@ $result = $statement->fetchAll();
     <title>Document</title>
 </head>
 <body>
+    <?php 
     
+    
+    ?>
 </body>
 </html>
