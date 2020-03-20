@@ -5,8 +5,7 @@ $password = '2lhTgGvMS4YKS3t2H7MV';
 $dbname = "characters";
 try {
     $conn = new PDO("mysql:host=$dbservername;dbname=characters", $username, $password);
-    // set the PDO error mode to exception
-    // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully";
     }
 catch(PDOException $e)
@@ -37,7 +36,7 @@ catch(PDOException $e)
    echo "<p id='health'><i id='health' class='fas fa-heart'></i> health : " . $character['health'] . "</p>";
    echo "<p id='attack'><i id='attack' class='fas fa-fist-raised'></i> attack : " . $character['attack'] . "</p>";
    echo "<p id='defense'><i id='defense' class='fas fa-shield-alt'></i> defense : " . $character['defense'] . "</p>";
-   echo "<hr></a></div>";
+   echo "</a><hr></div>";
     }
     include("footer.php");
    ?> 
