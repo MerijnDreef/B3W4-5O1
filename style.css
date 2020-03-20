@@ -1,0 +1,38 @@
+body{
+    margin:0 auto;
+    width:1100px;
+    background-color:#0e0d0d;
+}
+
+#health{
+    color:#b61111;
+}
+#attack{
+    color:#cac030
+}
+
+#defense{
+    color:#4073ff
+}
+
+h1{
+    color:#f8f8f8;
+    text-align:center;
+}
+img{
+    height:35%;
+    border-radius:50%;
+    float:left;
+}
+#naamText{
+    color:#f8f8f8;
+    font-size:34px;
+}
+p{
+    font-size:24px;
+}
+.doos{
+    width:50%;
+    margin-bottom:30px;
+    display:inline-block;
+}
