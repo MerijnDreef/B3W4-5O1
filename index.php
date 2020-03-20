@@ -29,11 +29,14 @@ catch(PDOException $e)
     <h1>Alle 10 characters uit de database</h1>
     <?php 
     foreach($result as $character){
-   echo "<div class='doos'><img src='images/" . $character['avatar'] . "'>";
+   echo "<div class='doos'>" 
+   echo '<a href="character.php/?name=' . urlencode($character['name']) . '">';
+   echo "<img src='images/" . $character['avatar'] . "'>";
    echo "<p id='naamText'>" . $character['name'] . "</p>";
    echo "<p id='health'> health : " . $character['health'] . "</p>";
    echo "<p id='attack'> attack : " . $character['attack'] . "</p>";
-   echo "<p id='defense'> defense : " . $character['defense'] . "</p></div>";
+   echo "<p id='defense'> defense : " . $character['defense'] . "</p>";
+   echo "<hr></div>";
     }
     include("footer.php");
    ?> 
