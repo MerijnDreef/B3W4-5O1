@@ -82,10 +82,9 @@ a{
     margin-right:10px;
     display:inline-block;
 }
-/* .statsStats{
-    width:300px;
-    height:200px;
-} */
+.statsStats{
+   padding-bottom:15px;
+}
 .weapon{
     margin:0;
     margin-bottom:10px;
