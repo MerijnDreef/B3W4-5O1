@@ -59,7 +59,8 @@ a{
     border:1px solid #acacac;
 }
 .characterText{
-    text-align:right;
+    display:inline-block;
+    width:780px;
     margin-top:0px;
 }
 .stats{
@@ -81,10 +82,10 @@ a{
     margin-right:10px;
     display:inline-block;
 }
-.statsStats{
+/* .statsStats{
     width:300px;
     height:200px;
-}
+} */
 .weapon{
     margin:0;
     margin-bottom:10px;
@@ -100,4 +101,10 @@ a{
     text-decoration:none;
     color:#f8f8f8;
     background-color:#474747;
+}
+.imgText{
+    vertical-align:top;
+    margin-top:0px;
+    display:inline-block;
+    width:300px;
 }
