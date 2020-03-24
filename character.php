@@ -13,10 +13,9 @@ catch(PDOException $e)
         echo "Connection failed: " . $e->getMessage();
     }
     $stat = $conn->prepare("SELECT * FROM characters where name = :naam;");
-    $result = $stat->fetchAll();
-    // $getResult = $_GET['name']
     $stat->execute([':naam' => urldecode($_GET['name'])]);
-    print_r($result[0]['name']);
+    $result = $stat->fetchAll();
+    // print_r($result[0]['name']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,6 +27,16 @@ catch(PDOException $e)
     <title>Document</title>
 </head>
 <body>
-    <?php  ?>
+   <?php echo "<a id='terugKnop' href='../index.php'><i class='fas fa-long-arrow-alt-left'></i>Terug</a><h1 id='top'>" . $_GET['name'] . "</h1>"?>
+    <div class='characterSite'>
+    <?php  echo "<div class='stats'>" ;
+     echo "<img class='statsImg' src='/B3W45O1/images/" . $result[0]['avatar'] . "'> <p class='characterText'>" . $result[0]['bio'] . "</p></div>";  
+     echo "<div style='background-color:" . $result[0]['color'] . "' class='statsStats'><i id='health' class='fas fa-heart'></i> <p class='statsText'>" . $result[0]['health'] . "</p>";
+     echo "<i id='attack' class='fas fa-fist-raised'></i> <p class='statsText'>" . $result[0]['attack'] . "</p>";
+     echo "<i id='defense' class='fas fa-shield-alt'></i> <p class='statsText'>" . $result[0]['defense'] . "</p>";
+     echo "<p class='weapon'> Weapon : " . $result[0]['weapon'] . "</p>";
+     echo "<p class='armour'> Armour : " . $result[0]['armor'] . "</p> </div></div>"; 
+     include("footer.php");?>
+    </div>
 </body>
 </html>

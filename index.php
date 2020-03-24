@@ -31,7 +31,7 @@ catch(PDOException $e)
     foreach($result as $character){
    echo "<div class='doos'>";
    echo '<a href="character.php/?name=' . urlencode($character['name']) . '">';
-   echo "<img src='images/" . $character['avatar'] . "'>";
+   echo "<img class='mainImg' src='images/" . $character['avatar'] . "'>";
    echo "<p id='naamText'>" . $character['name'] . "</p>";
    echo "<p id='health'><i id='health' class='fas fa-heart'></i> health : " . $character['health'] . "</p>";
    echo "<p id='attack'><i id='attack' class='fas fa-fist-raised'></i> attack : " . $character['attack'] . "</p>";

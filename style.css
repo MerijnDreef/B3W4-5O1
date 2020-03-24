@@ -22,7 +22,7 @@ h1{
     color:#f8f8f8;
     text-align:center;
 }
-img{
+.mainImg{
     height:35%;
     border-radius:50%;
     float:left;
@@ -53,4 +53,51 @@ hr{
 }
 a{
     text-decoration:none;
+}
+.characterSite{
+    background-color:#797979;
+    border:1px solid #acacac;
+}
+.characterText{
+    text-align:right;
+    margin-top:0px;
+}
+.stats{
+    display:block;
+    background-color:#797979;
+}
+#top{
+    margin-top:0;
+    padding-bottom:30px;
+    background-color:#474747;
+    color:#f8f8f8;
+    text-align:center;
+}
+.statsImg{
+    float:left;
+}
+.statsText{
+    margin-right:5px;
+    margin-right:10px;
+    display:inline-block;
+}
+.statsStats{
+    width:300px;
+    height:200px;
+}
+.weapon{
+    margin:0;
+    margin-bottom:10px;
+}
+.armour{
+    margin:0;
+}
+#terugKnop{
+    padding-left:85%;
+    padding-right:5%;
+    font-size:18px;
+    float:right;
+    text-decoration:none;
+    color:#f8f8f8;
+    background-color:#474747;
 }
